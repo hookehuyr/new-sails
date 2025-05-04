@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Sails App</title>
+
+    <!-- 用于合理的移动端支持的视口标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <%/* 如果你想阻止搜索引擎索引此网站，请取消下面这行的注释： */%>
+    <%/* <meta name="robots" content="noindex"> */%>
+
+
+    <!--
+        样式表和预处理器
+        ==============================
+
+        你可以通过 `<link>` 标签手动引入CSS文件，或者使用像AMD（RequireJS）这样的
+        异步加载方案。或者，你也可以利用Sails的常规资源管道（使用默认的Gruntfile）。
+
+        默认情况下，你的 `assets/styles` 文件夹中的样式表会自动包含在
+        这里（在STYLES和STYLES END之间）。支持CSS（.css）和LESS（.less）
+        文件。在生产环境中，你的样式将被压缩并合并成一个文件。
+
+        要自定义任何内置行为，只需编辑 `tasks/pipeline.js`。
+        例如，你可以：
+
+            + 更改CSS文件的加载顺序
+            + 从其他目录导入样式表
+            + 使用其他预处理器，如SASS、SCSS或Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <%- body %>
+
+
+
+    <!--
+        客户端模板
+        ========================
+
+        HTML模板是现代富客户端应用程序的重要先决条件。
+        为了发挥其魔力，像React、Vue.js、Angular、Ember和Backbone这样的框架
+        需要在客户端加载这些模板。
+
+        默认情况下，你的Gruntfile配置为自动加载和预编译
+        `assets/templates` 文件夹中的客户端JST模板，然后
+        自动将它们包含在这里（在TEMPLATES和TEMPLATES END之间）。
+
+        要根据你的需求自定义此行为，只需编辑 `tasks/pipeline.js`。
+        例如，你可以：
+
+            + 从其他目录导入模板
+            + 使用不同的视图引擎（handlebars、dust、pug/jade等）
+            + 在提供服务之前，使用服务器端字符串文件
+              对客户端模板进行国际化。
+    -->
+
+    <!--TEMPLATES-->
+    <!--TEMPLATES END-->
+
+
+    <!--
+        服务器端视图本地变量
+        ========================
+
+        有时，从客户端JavaScript访问服务器端视图本地变量会很方便。
+        这可以改善页面加载时间，减少额外的AJAX请求，并使你的
+        客户端代码更容易理解和维护。Sails提供了一个简单的机制
+        来访问动态视图本地变量："exposeLocalsToBrowser()" 视图片段。
+
+        有关使用此内置功能的更多信息，请参见：
+        https://sailsjs.com/docs/concepts/views/locals#?escaping-untrusted-data-using-exposelocalstobrowser
+
+    -->
+
+
+    <!--
+
+      客户端JavaScript
+      ========================
+
+      你可以通过 `script` 标签手动引入JS文件，或者在客户端使用
+      像AMD（RequireJS）这样的异步加载方案。或者，你也可以利用
+      Sails的常规资源管道（使用默认的Gruntfile）。
+
+      默认情况下，你的 `assets/js` 文件夹中的文件会自动包含在
+      这里（在SCRIPTS和SCRIPTS END之间）。支持JavaScript（.js）和
+      CoffeeScript（.coffee）文件。在生产环境中，你的脚本将被压缩
+      并合并成一个文件。
+
+      要自定义任何内置行为，只需编辑 `tasks/pipeline.js`。
+      例如，你可以：
+
+          + 更改脚本的加载顺序
+          + 从其他目录导入脚本
+          + 使用其他预处理器，如TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/dependencies/sails.io.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>
