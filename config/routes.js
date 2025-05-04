@@ -36,4 +36,11 @@ module.exports.routes = {
   'GET /test/go': 'TestController.go',
   'GET /test/about': 'TestController.about',
 
+  'GET /page1': 'TestController.page1',
+  'GET /page2': [
+    { policy: 'accessLog' },
+    { controller: 'test', action: 'page2' }
+  ],
+  'GET /about/page3': 'TestController.page3',
+
 };
